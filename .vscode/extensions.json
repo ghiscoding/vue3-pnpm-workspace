@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "antfu.vite",
+    "dbaeumer.vscode-eslint",
+    "rvest.vs-code-prettier-eslint",
+    "Vue.volar",
+    "andys8.jest-snippets",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
+  ]
+}

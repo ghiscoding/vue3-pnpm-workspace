@@ -1,0 +1,45 @@
+{
+  "name": "@monotest/composables",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Ghislain B.",
+  "module": "./dist/composables.es.js",
+  "main": "./dist/composables.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/composables.es.js"
+    },
+    "./*": "./*"
+  },
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "scripts": {
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "build:watch": "vite build --watch",
+    "build:types": "vue-tsc --emitDeclarationOnly",
+    "lint": "eslint --ext .ts,.vue src/ --ignore-path ../.gitignore"
+  },
+  "dependencies": {
+    "sass": "^1.52.1",
+    "vue": "^3.2.36"
+  },
+  "peerDependencies": {
+    "vue": "3.x"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "eslint": "^8.16.0",
+    "typescript": "^4.7.2",
+    "unplugin-vue-components": "^0.19.6",
+    "vite": "^2.9.9",
+    "vue-eslint-parser": "^9.0.2",
+    "vue-tsc": "^0.34.16"
+  }
+}

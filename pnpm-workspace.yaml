@@ -1,0 +1,5 @@
+packages:
+  - 'apps/application1/**'
+  - 'apps/application2/**'
+  - 'components/**'
+  - 'composables/**'

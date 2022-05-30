@@ -1,0 +1,23 @@
+{
+  "name": "monotest",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "app1:predev": "pnpm -r --stream --filter components build",
+    "app1:dev": "pnpm --filter \"{apps/application1/**}\" dev",
+    "app2:predev": "pnpm -r --stream --filter components build",
+    "app2:dev": "pnpm --filter \"{apps/application2/**}\" dev",
+    "prebuild": "pnpm -r lint",
+    "build": "pnpm -r --stream build",
+    "app1:build": "pnpm -r --stream --filter components --filter \"{apps/application1/**}\" build",
+    "app2:build": "pnpm -r --stream --filter components --filter \"{apps/application2/**}\" build",
+    "build:components": "pnpm --filter components build",
+    "build:composables": "pnpm --filter \"{composables/**}\" build",
+    "build:watch": "pnpm -r --parallel build:watch",
+    "lint": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "pnpm": "^7.1.6"
+  }
+}
