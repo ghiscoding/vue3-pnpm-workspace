@@ -36,7 +36,12 @@ $type-colors: (
     background-color: $color;
     color: #fff;
 
-    &:hover {
+    &:disabled {
+      cursor: default;
+      border-color: lighten($color, 10%);
+      background-color: lighten($color, 20%);
+    }
+    &:hover:not(:disabled) {
       background-color: darken($color, 4%);
     }
   }

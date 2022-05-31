@@ -18,7 +18,7 @@ import HelloWorld from '@/components/HelloWorld.vue';
       <div class="hr-container">
         <hr />
       </div>
-      <div class="extra">Route to "<RouterLink to="/hello">Hello World</RouterLink>" to see reusable Components &amp; Composables</div>
+      <div class="extra">Go to "<RouterLink to="/hello">Hello World</RouterLink>" route to see reusable Components &amp; Composables</div>
     </div>
   </header>
 

@@ -4,6 +4,7 @@ import { useMouse } from '@monotest/composables';
 import { ref } from 'vue';
 
 const btn1Label = ref('I dare you to click me!');
+const btn1Disabled = ref(false);
 const btn2Label = ref('Button, count is: 0');
 const btn2Count = ref(0);
 const msg = ref('Hello World');
@@ -11,6 +12,7 @@ const counter = ref(2);
 const { x, y } = useMouse();
 
 function onButton1Clicked() {
+  btn1Disabled.value = true;
   btn1Label.value = 'Button clicked... Game Over!';
 }
 function onButton2Clicked() {
@@ -53,7 +55,7 @@ function onButton2Clicked() {
     </div>
     <div class="component-container">
       <label>Reusable Component <code>my-btn</code></label>
-      <my-btn :label="btn1Label" type="danger" @on-click="onButton1Clicked" />
+      <my-btn :label="btn1Label" type="danger" :disabled="btn1Disabled" @on-click="onButton1Clicked" />
       <my-btn :label="btn2Label" type="info" @on-click="onButton2Clicked" />
     </div>
 
