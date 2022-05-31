@@ -10,12 +10,12 @@ The other ability that pnpm workspace is providing us is the ability to have our
 
 ## What is included/configured
 
+- [Vite](https://vitejs.dev/)
 - [Vue 3 - Composition API](https://vuejs.org/api/composition-api-setup.html#composition-api-setup)
   - we use the `script setup` syntax in a TypeScript environment, more info in this Medium [article](https://medium.com/@AzilenTech/using-script-setup-for-vue-3-ec4b6173b7f4)
-- [Vite](https://vitejs.dev/)
 - [pnpm workspaces](https://pnpm.io/workspaces)
 - [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) using [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
-- [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) to auto-import Vue Components (to avoid having to call `.use()` for each Components)
+- [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) to auto-import Vue Components (to avoid adding `.use()` on each)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## How does it work?
