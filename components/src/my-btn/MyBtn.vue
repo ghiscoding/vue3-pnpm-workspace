@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-
 export type ButtonType = 'info' | 'primary' | 'danger' | 'warning';
 
 export interface Props {
@@ -13,58 +11,34 @@ const emit = defineEmits<{ (e: 'onClick', data: any): void }>();
 </script>
 
 <template>
-  <button class="btn" :class="type" type="button" @click="emit('onClick', $event)">{{ label }}</button>
+  <button class="btn" :class="`btn-${type}`" type="button" @click="emit('onClick', $event)">{{ label }}</button>
 </template>
 
 <style lang="scss">
-$info: #4098fc;
-$danger: #de576d;
-$primary: #41b883;
-$warning: #fcb040;
+$btn-radius: 2px;
+$btn-height: 2.5em;
+$type-colors: (
+  info: #52a1fc,
+  danger: #e0687c,
+  primary: #41b883,
+  warning: #fdb74e,
+);
 
 .btn {
-  border-radius: 2px;
-  height: 2.5em;
+  border-radius: $btn-radius;
+  height: $btn-height;
 }
 
-.info {
-  cursor: pointer;
-  border: 1px solid darken($info, 10%);
-  background-color: $info;
-  color: #fff;
+@each $type, $color in $type-colors {
+  .btn-#{$type} {
+    cursor: pointer;
+    border: 1px solid darken($color, 10%);
+    background-color: $color;
+    color: #fff;
 
-  &:hover {
-    background-color: darken($info, 4%);
-  }
-}
-.danger {
-  cursor: pointer;
-  border: 1px solid darken($danger, 10%);
-  background-color: $danger;
-  color: #fff;
-
-  &:hover {
-    background-color: darken($danger, 4%);
-  }
-}
-.primary {
-  cursor: pointer;
-  border: 1px solid darken($primary, 10%);
-  background-color: $primary;
-  color: #fff;
-
-  &:hover {
-    background-color: darken($primary, 4%);
-  }
-}
-.warning {
-  cursor: pointer;
-  border: 1px solid darken($warning, 10%);
-  background-color: $warning;
-  color: #fff;
-
-  &:hover {
-    background-color: darken($warning, 4%);
+    &:hover {
+      background-color: darken($color, 4%);
+    }
   }
 }
 </style>

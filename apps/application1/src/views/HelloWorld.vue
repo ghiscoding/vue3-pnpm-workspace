@@ -52,7 +52,7 @@ function onButton2Clicked() {
       <button type="button" @click="counter++">counter is: {{ counter }}</button>
     </div>
     <div class="component-container">
-      <label>Reusable Component button</label>
+      <label>Reusable Component <code>my-btn</code></label>
       <my-btn :label="btn1Label" type="danger" @on-click="onButton1Clicked" />
       <my-btn :label="btn2Label" type="info" @on-click="onButton2Clicked" />
     </div>

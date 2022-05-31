@@ -23,7 +23,7 @@ function onButtonClick() {
       <button type="button" @on-click="counter++">counter is: {{ counter }}</button>
     </div>
     <div class="component-container">
-      <label>Reusable Component button</label>
+      <label>Reusable Component <code>my-btn</code></label>
       <my-btn :label="btnLabel" type="primary" @click="onButtonClick" />
     </div>
 
