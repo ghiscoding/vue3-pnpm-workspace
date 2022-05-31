@@ -4,17 +4,17 @@ import { useMouse } from '@monotest/composables';
 import { ref } from 'vue';
 
 const btn1Label = ref('I dare you to click me!');
-const btn2Label = ref('Hello Button, count is: 0');
+const btn2Label = ref('Button, count is: 0');
 const btn2Count = ref(0);
 const msg = ref('Hello World');
 const counter = ref(2);
 const { x, y } = useMouse();
 
 function onButton1Clicked() {
-  btn1Label.value = 'Button is clicked... boom';
+  btn1Label.value = 'Button clicked... Game Over!';
 }
 function onButton2Clicked() {
-  btn2Label.value = `Hello Button, count is: ${++btn2Count.value}`;
+  btn2Label.value = `Button, count is: ${++btn2Count.value}`;
 }
 </script>
 

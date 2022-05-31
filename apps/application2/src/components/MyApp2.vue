@@ -3,14 +3,14 @@ import { MyBtn } from '@monotest/components';
 import { useMouse } from '@monotest/composables';
 import { ref } from 'vue';
 
-const btnLabel = ref('Hello Button, count is: 0');
+const btnLabel = ref('Button, count is: 0');
 const btnCount = ref(0);
 const msg = ref('Application 2');
 const counter = ref(2);
 const { x, y } = useMouse();
 
 function onButtonClick() {
-  btnLabel.value = `Hello Button, count is: ${++btnCount.value}`;
+  btnLabel.value = `Button, count is: ${++btnCount.value}`;
 }
 </script>
 
@@ -24,7 +24,7 @@ function onButtonClick() {
     </div>
     <div class="component-container">
       <label>Reusable Component button</label>
-      <my-btn :label="btnLabel" type="info" @click="onButtonClick" />
+      <my-btn :label="btnLabel" type="primary" @click="onButtonClick" />
     </div>
 
     <br />
