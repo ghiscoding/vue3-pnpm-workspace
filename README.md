@@ -6,7 +6,7 @@
 
 This boilerplate is to demo a setup where we can take advantage of [pnpm workspaces](https://pnpm.io/workspaces) where multiple Vue 3 applications can share Components and Composables. This setup will provide the ability for different teams to work on different applications while being able to share reusable Components & Composables to follow a DRY (Don't Repeat Yourself) setup.
 
-The other ability that pnpm workspace is providing us is the ability to have our workspace running with and even without publishing the Component, Composable packages on NPM (under an [npm organization](https://docs.npmjs.com/organizations) to take advantage or workspace) or locally with [Verdaccio](https://verdaccio.org/)... in other words you could publish each packages of the workspace (in this demo that would be 4 of them: [application1](/tree/main/apps/application1), [application2](/tree/main/apps/application2), [components](/tree/main/components) and [composables](/tree/main/composables)) or simply skip all of that and simply build & run them locally without ever publishing them anywhere.
+The other ability that pnpm workspace is providing us is the ability to have our workspace running with and even without publishing the Component, Composable packages on NPM (under an [npm organization](https://docs.npmjs.com/organizations) to take advantage or workspace) or locally with [Verdaccio](https://verdaccio.org/)... in other words you could publish each packages of the workspace (in this demo that would be 4 of them: [application1](/apps/application1), [application2](/apps/application2), [components](/components) and [composables](/composables)) or simply skip all of that and simply build & run them locally without ever publishing them anywhere.
 
 ## What is included/configured
 
@@ -30,11 +30,11 @@ For more info about Vite library mode, this [article](https://dev.to/josip2312/b
 
 A very simple `MyButton` Component is provided as an example of a reusable component
 
-#### Composables ([/composables](/tree/main/composables))
+#### Composables ([/composables](/composables))
 
 A very simple `useMouse` Composable, which is a mouse position tracker, is provided as an example of a reusable composable.
 
-#### Apps ([/apps](/tree/main/apps))
+#### Apps ([/apps](/apps))
 
 The `Apps` folder is where you will want to include all your applications.
 
