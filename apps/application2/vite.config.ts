@@ -30,4 +30,7 @@ export default defineConfig({
       '@composables': `${path.resolve(__dirname, '../composables/src')}`,
     },
   },
+  server: {
+    port: 4000,
+  },
 });
