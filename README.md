@@ -26,7 +26,7 @@ For more info about Vite library mode, this [article](https://dev.to/josip2312/b
 
 ## Project structure
 
-#### Components ([/components](/tree/main/components))
+#### Components ([/components](tree/main/components))
 
 A very simple `MyButton` Component is provided as an example of a reusable component
 
