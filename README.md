@@ -8,6 +8,8 @@ This boilerplate is to demo a setup where we can take advantage of [pnpm workspa
 
 The other ability that pnpm workspace is providing us is the ability to have our workspace running with and even without publishing the Component, Composable packages on NPM (under an [npm organization](https://docs.npmjs.com/organizations) to take advantage or workspace) or locally with [Verdaccio](https://verdaccio.org/)... in other words you could publish each packages of the workspace (in this demo that would be 4 of them: [application1](/apps/application1), [application2](/apps/application2), [components](/components) and [composables](/composables)) or simply skip all of that and simply build & run them locally without ever publishing them anywhere.
 
+For a great versioning/publishing tool in a workspace environment, take a look at [Lerna-Lite](https://github.com/ghiscoding/lerna-lite) which is what I use in a workspace monorepo structure.
+
 ## What is included/configured
 
 - [Vite](https://vitejs.dev/)
